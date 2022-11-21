@@ -1,15 +1,16 @@
-import { FC } from 'react'
-import Header from './header'
-import { Outlet } from 'react-router-dom'
+import { FC } from "react";
+import Header from "./header";
+import { Outlet } from "react-router-dom";
+import Footer from "./footer";
 
-
-const Layout: FC= () => {
+const Layout: FC = () => {
   return (
     <>
-      <Header/>
-      <Outlet/>
+      <Header />
+      <Outlet />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

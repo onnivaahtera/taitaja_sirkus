@@ -1,18 +1,22 @@
-import { FC } from 'react'
-import logo from '../img/logo.jpg'
-
+import { FC } from "react";
+import Moblie from "./mobile";
 
 const Header = () => {
   return (
-    <div className='bg-amber-800 h-14 flex'>
-      <div>
-        <a href="/">
-          <img className='w-40 h-14' src={logo} alt="" />
-        </a>
+    <>
+      <div className="hidden md:block">
+        <div className="bg-header h-auto flex">
+          <div className="p-5">
+            <a href="/">Etusivu</a>
+          </div>
+          <div className="p-5">
+            <a href="/about">Sirkunnan toimintaa</a>
+          </div>
+        </div>
       </div>
-        <a href="/about">Sirkunnan toimintaa</a>
-    </div>
-  )
-}
 
-export default Header
+      <Moblie />
+    </>
+  );
+};
+export default Header;
