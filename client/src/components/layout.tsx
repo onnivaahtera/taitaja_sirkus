@@ -1,12 +1,14 @@
 import { FC } from 'react'
+import Header from './header'
+import { Outlet } from 'react-router-dom'
 
-interface layoutProps {
-  
-}
 
-const Layout: FC<layoutProps> = ({childern}: any) => {
+const Layout: FC= () => {
   return (
-    <main>{childern}</main>
+    <>
+      <Header/>
+      <Outlet/>
+    </>
   )
 }
 

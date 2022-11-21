@@ -7,7 +7,7 @@ interface headerProps {
 const Header: FC<headerProps> = ({}) => {
   return (
     <div>
-        
+        Header
     </div>
   )
 }
