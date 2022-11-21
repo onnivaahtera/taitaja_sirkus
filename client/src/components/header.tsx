@@ -1,16 +1,19 @@
-import { FC } from "react";
 import Moblie from "./mobile";
 
 const Header = () => {
   return (
     <>
       <div className="hidden md:block">
-        <div className="bg-header h-auto flex">
+        <div className="bg-header h-auto flex justify-center">
           <div className="p-5">
-            <a href="/">Etusivu</a>
+            <a href="/" className="hover:underline">
+              Etusivu
+            </a>
           </div>
-          <div className="p-5">
-            <a href="/about">Sirkunnan toimintaa</a>
+          <div className="p-5 ">
+            <a href="/about" className="hover:underline">
+              Sirkunnan toimintaa
+            </a>
           </div>
         </div>
       </div>
