@@ -10,12 +10,10 @@ $items = new Shows($db);
 $stmt = $items->getShows();
 $itemCount = $stmt->rowCount();
 
-echo json_encode($itemCount);
 if ($itemCount > 0) {
 
     $showArr = array();
     $showArr["body"] = array();
-    $showArr["itemCount"] = $itemCount;
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $e = array(
