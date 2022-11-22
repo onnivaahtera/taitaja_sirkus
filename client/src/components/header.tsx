@@ -15,6 +15,11 @@ const Header = () => {
               Sirkunnan toimintaa
             </a>
           </div>
+          <div className="p-5">
+            <a href="/shows" className="hover:underline">
+              Esitykset
+            </a>
+          </div>
         </div>
       </div>
 
