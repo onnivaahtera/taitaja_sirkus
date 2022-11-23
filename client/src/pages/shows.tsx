@@ -33,7 +33,7 @@ function Shows() {
               className="m-3 p-3 bg-header w-fit"
             >
               <li>Teema: {item.theme}</li>
-              <li>Paikkoja{item.seats}</li>
+              <li>Paikkoja: {item.seats}</li>
               <li>Vapaita paikkoja: {item.freeSeats}</li>
             </button>
           ))}

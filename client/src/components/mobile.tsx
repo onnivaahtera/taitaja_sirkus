@@ -32,6 +32,9 @@ function Moblie() {
             <div className="p-2">
               <a href="/about">Sirkunnan toimintaa</a>
             </div>
+            <div className="p-2">
+              <a href="/shows">Esitykset</a>
+            </div>
           </div>
         </div>
       </div>
