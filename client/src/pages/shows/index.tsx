@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 function Shows() {
   const [show, setShow] = useState<any[]>([]);
 
+  // fetch shows from api endpoint
   useEffect(() => {
     fetch("http://localhost/sirkus/php/api/read.php")
       .then((res) => res.json())
@@ -18,7 +19,7 @@ function Shows() {
           {show.map((item, key) => (
             <button
               disabled={item.freeSeats <= 0}
-              onClick={() => (window.location.href = `./show/${item.id}`)}
+              onClick={() => (window.location.href = `/shows/${item.id}`)}
               key={key}
               className="m-3 p-3 bg-header w-fit"
             >

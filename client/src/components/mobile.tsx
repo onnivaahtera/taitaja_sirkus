@@ -26,13 +26,10 @@ function Moblie() {
           className="h-0 w-full fixed z-10 left-0 top-0 overflow-x-auto duration-300 bg-overlay"
         >
           <div className="relative text-2xl top-5 w-full text-center mt-8">
-            <div className="p-2">
+            <div className="p-2 hover:underline">
               <a href="/">Etusivu</a>
             </div>
-            <div className="p-2">
-              <a href="/about">Sirkunnan toimintaa</a>
-            </div>
-            <div className="p-2">
+            <div className="p-2 hover:underline">
               <a href="/shows">Esitykset</a>
             </div>
           </div>
