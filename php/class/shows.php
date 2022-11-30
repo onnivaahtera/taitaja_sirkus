@@ -26,7 +26,16 @@ class Shows
     // GET ALL
     public function getShows()
     {
-        $sqlQuery = "SELECT esitysID, teema, esityspaikka, kaupunki, pvm, paikat, vapaitapaikkoja FROM " . $this->table . "";
+        $sqlQuery = "SELECT esitysID, teema, esityspaikka, kaupunki, pvm, paikat, vapaitapaikkoja FROM  $this->table ";
+        $stmt = $this->conn->prepare($sqlQuery);
+        $stmt->execute();
+        return $stmt;
+    }
+    public function getShow()
+    {
+        $id = $_GET['id'];
+
+        $sqlQuery = "SELECT esitysID, teema, esityspaikka, kaupunki, pvm, paikat, vapaitapaikkoja from $this->table WHERE esitysID='$id'";
         $stmt = $this->conn->prepare($sqlQuery);
         $stmt->execute();
         return $stmt;

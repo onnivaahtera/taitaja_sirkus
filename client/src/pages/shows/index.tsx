@@ -19,7 +19,9 @@ function Shows() {
           {show.map((item, key) => (
             <button
               disabled={item.freeSeats <= 0}
-              onClick={() => (window.location.href = `/shows/${item.id}`)}
+              onClick={() =>
+                (window.location.href = `/shows/show?id=${item.id}`)
+              }
               key={key}
               className="m-3 p-3 bg-header w-fit"
             >

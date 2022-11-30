@@ -11,14 +11,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="shows" element={<Shows />} />
-          <Route
-            path="/shows/:id"
-            loader={({ params }) => {
-              console.log(params.id);
-            }}
-            action={({ params }) => {}}
-            element={<Form />}
-          />
+          <Route path="/shows/:id" element={<Form />} />
         </Route>
       </Routes>
     </BrowserRouter>
