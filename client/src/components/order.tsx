@@ -1,51 +1,78 @@
-import { FC, FormEvent, useState } from "react";
+import { FC, FormEvent, ChangeEvent, useState } from "react";
 
 const OrderForm: FC = () => {
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [ticket, setTicket] = useState("");
+  const [order, setOrder] = useState({ email: "", phone: "", tickets: "" });
 
-  const submit = (e: FormEvent) => {
+  // Handle form submit
+  const submitForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
+  // Handle form change
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setOrder((values) => ({ ...values, [name]: value }));
+  };
+
   return (
-    <div>
-      <form action="" method="post">
-        <div className="flex m-2">
-          <label htmlFor="email">Sähköposti: </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="rounded text-black"
-          />
+    <div className="mx-auto w-4/5 rounded-md md:w-96">
+      <form id="registerFrom" method="POST" onSubmit={submitForm}>
+        <div className="">
+          <div className="px-4 pt-1">
+            <label
+              className="block w-fit p-2 hover:cursor-text"
+              htmlFor="email"
+            >
+              Sähköposti:
+            </label>
+            <input
+              className="block w-full rounded border-2 border-gray-800 bg-inherit p-2 text-sm hover:border-cyan-500"
+              type="email"
+              name="email"
+              value={order.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="px-4 pt-1">
+            <label
+              className="block w-fit p-2 hover:cursor-text"
+              htmlFor="email"
+            >
+              Puhelinnumero:
+            </label>
+            <input
+              className="block w-full rounded border-2 border-gray-800 bg-inherit p-2 text-sm hover:border-cyan-500"
+              type="text"
+              name="phone"
+              value={order.phone}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="px-4 pt-1">
+            <label
+              className="block w-fit p-2 hover:cursor-text"
+              htmlFor="tickets"
+            >
+              Lippujen määrä:
+            </label>
+            <input
+              className="block w-full rounded border-2 border-gray-800 bg-inherit p-2 text-sm hover:border-cyan-500"
+              type="text"
+              name="tickets"
+              value={order.tickets}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              className="m-4 h-10 w-40 rounded-lg border-2 border-gray-800 bg-inherit hover:border-cyan-500"
+            >
+              Osta
+            </button>
+          </div>
         </div>
-        <div className="flex m-2">
-          <label htmlFor="phone">Puhelinnumero: </label>
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            className="rounded text-black"
-          />
-        </div>
-        <div className="flex m-2">
-          <label htmlFor="ticket">Lippuja: </label>
-          <input
-            type="text"
-            name="ticket"
-            id="ticket"
-            className="rounded text-black"
-          />
-        </div>
-        <button
-          type="submit"
-          onClick={submit}
-          className="bg-green-500 w-20 h-10 rounded text-black"
-        >
-          Osta
-        </button>
       </form>
     </div>
   );

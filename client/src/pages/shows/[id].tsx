@@ -27,11 +27,11 @@ const Form: FC = () => {
       <div>
         {show.map((value, key) => (
           <div key={key} className="text-green-700">
-            <div>{value.theme}</div>
-            <div>{value.area}</div>
-            <div>{value.city}</div>
-            <div>{value.date}</div>
-            <div>{value.freeSeats}</div>
+            <div>Esityksen teema: {value.theme}</div>
+            <div>Esityspaikka: {value.area}</div>
+            <div>Kaupunki: {value.city}</div>
+            <div>Päivämäärä: {value.date}</div>
+            <div>Paikkoja vapaana: {value.freeSeats}</div>
           </div>
         ))}
       </div>
