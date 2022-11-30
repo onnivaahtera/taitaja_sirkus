@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import OrderForm from "../../components/order";
 
-function useQuery() {
+export function useQuery() {
   const { search } = useLocation();
   return React.useMemo(() => new URLSearchParams(search), [search]);
 }
