@@ -1,6 +1,10 @@
-import { FC, FormEvent } from "react";
+import { FC, FormEvent, useState } from "react";
 
 const OrderForm: FC = () => {
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [ticket, setTicket] = useState("");
+
   const submit = (e: FormEvent) => {
     e.preventDefault();
   };
@@ -35,7 +39,11 @@ const OrderForm: FC = () => {
             className="rounded text-black"
           />
         </div>
-        <button type="submit" onClick={submit}>
+        <button
+          type="submit"
+          onClick={submit}
+          className="bg-green-500 w-20 h-10 rounded text-black"
+        >
           Osta
         </button>
       </form>

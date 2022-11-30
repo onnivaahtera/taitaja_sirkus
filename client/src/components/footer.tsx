@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="overflow-hidden absolute left-0 bottom-0 w-full text-center bg-footer">
+    <div className="overflow-hidden static left-0 bottom-0 w-full text-center bg-footer">
       <h2 className="text-2xl p-2">Yheystiedot</h2>
       <br />
       <div className="flex justify-center items-center">
