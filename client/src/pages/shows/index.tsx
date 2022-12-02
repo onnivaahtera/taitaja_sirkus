@@ -13,7 +13,7 @@ function Shows() {
   if (!show) return <div>No shows</div>;
 
   return (
-    <div>
+    <div className="h-screen">
       <div>
         <ul>
           {show.map((item, key) => (

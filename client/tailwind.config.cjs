@@ -7,9 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        header: '#826644',
-        footer: '#826644',
-        overlay: 'rgba(0,0,0, 0.9)'
+        header: '#4e3e2a',
+        footer: '#4e3e2a',
       },
     },
   },

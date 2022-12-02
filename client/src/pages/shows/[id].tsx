@@ -23,10 +23,10 @@ const Form: FC = () => {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <div>
         {show.map((value, key) => (
-          <div key={key} className="text-green-700">
+          <div key={key} className="text-green-500">
             <div>Esityksen teema: {value.theme}</div>
             <div>Esityspaikka: {value.area}</div>
             <div>Kaupunki: {value.city}</div>

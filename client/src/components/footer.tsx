@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="fixed left-0 w-full bottom-0">
+    <div className="left-0 mt-20 w-full bottom-0">
       <div className="text-center bg-footer">
         <h2 className="text-2xl p-2">Yheystiedot</h2>
         <br />

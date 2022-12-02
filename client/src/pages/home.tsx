@@ -9,7 +9,7 @@ const Home: FC = () => {
           <img
             src={image}
             alt="hero"
-            className="bg-blend-darken brightness-50 h-1/2 z-0 bg-center bg-no-repeat bg-cover relative bg-gradient-to-r from-black to-black"
+            className="bg-blend-darken brightness-50 h-1/5 z-0 bg-center bg-no-repeat bg-cover relative bg-gradient-to-r from-black to-black"
           />
           <div>
             <h1 className="text-2xl text-center absolute top-1/3 left-1/2 z-50">
@@ -33,6 +33,9 @@ const Home: FC = () => {
           tarvittava rekvisiitta.
         </div>
         <div>
+          <div>
+            <span className="text-xl">Kartta sirkuksen osoitteesta</span>
+          </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2430.595006153708!2d24.658969648409673!3d60.15269939119416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sfi!4v1669802362926!5m2!1sen!2sfi"
             width="600"
