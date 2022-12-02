@@ -13,9 +13,7 @@ $itemCount = $stmt->rowCount();
 $data = json_decode(file_get_contents('php://input'), true);
 $parsedData = $data['order'];
 
-
 if ($itemCount > 0) {
-
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         if ($vapaitapaikkoja < $parsedData['tickets']) {
