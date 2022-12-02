@@ -5,11 +5,17 @@ const Home: FC = () => {
   return (
     <div>
       <div className="mx-6">
-        <div>
-          <h1 className="text-2xl text-center">Tervetuloa</h1>
-        </div>
-        <div className="flex">
-          <img src={image} alt="" className="w-1/2 m-6" />
+        <div className="flex justify-center">
+          <img
+            src={image}
+            alt="hero"
+            className="bg-blend-darken brightness-50 h-1/2 z-0 bg-center bg-no-repeat bg-cover relative bg-gradient-to-r from-black to-black"
+          />
+          <div>
+            <h1 className="text-2xl text-center absolute top-1/3 left-1/2 z-50">
+              Tervetuloa
+            </h1>
+          </div>
         </div>
         <h2 className="p-4 text-xl">Sirkuksen toiminta</h2>
         <div className="m-4 p-2">

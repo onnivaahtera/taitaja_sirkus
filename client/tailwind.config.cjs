@@ -10,7 +10,7 @@ module.exports = {
         header: '#826644',
         footer: '#826644',
         overlay: 'rgba(0,0,0, 0.9)'
-      }
+      },
     },
   },
   plugins: [],

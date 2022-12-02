@@ -4,8 +4,7 @@ import { useQuery } from "../pages/shows/[id]";
 
 const OrderForm: FC = () => {
   const [order, setOrder] = useState({ email: "", phone: "", tickets: "" });
-
-  const query = useQuery();
+  const [message, setMessage] = useState<any>();
 
   // Handle form submit
   const submitForm = (e: FormEvent<HTMLFormElement>) => {

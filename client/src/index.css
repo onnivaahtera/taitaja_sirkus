@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 html{
     background-color: #C19A6B;
     color: white;
