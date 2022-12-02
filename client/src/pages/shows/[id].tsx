@@ -1,7 +1,7 @@
 import React from "react";
 import { FC, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import OrderForm from "../../components/order";
+import OrderForm from "../../components/orderForm";
 
 export function useQuery() {
   const { search } = useLocation();

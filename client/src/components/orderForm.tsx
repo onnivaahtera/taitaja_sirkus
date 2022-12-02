@@ -19,7 +19,11 @@ const OrderForm: FC = () => {
       },
     });
   };
-
+  const getMessage = () => {
+    axios
+      .get(`http://localhost/sirkus/php/api/get.php/?id=${query.get("id")}`)
+      .then((response) => setMessage(response));
+  };
   // Sets order state from inputs
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const name = e.target.name;
