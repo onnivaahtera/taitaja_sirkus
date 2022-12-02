@@ -6,19 +6,21 @@ const OrderForm: FC = () => {
   const [order, setOrder] = useState({ email: "", phone: "", tickets: "" });
   const [message, setMessage] = useState<any>();
 
-  // Handle form submit
+  let query = useQuery();
+
+  // Send order to php endpoint
   const submitForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     axios({
       method: "post",
-      url: `http://localhost/sirkus/php/api/get.php/`,
+      url: `http://localhost/sirkus/php/api/get.php/?id=${query.get("id")}`,
       data: {
         order,
       },
     });
   };
 
-  // Handle form change
+  // Sets order state from inputs
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const name = e.target.name;
     const value = e.target.value;

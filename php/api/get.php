@@ -7,7 +7,7 @@ include_once '../class/shows.php';
 $database = new Database();
 $db = $database->getConnection();
 $items = new Shows($db);
-$stmt = $items->getShows();
+$stmt = $items->getShow();
 $itemCount = $stmt->rowCount();
 
 $data = json_decode(file_get_contents('php://input'), true);
@@ -17,10 +17,13 @@ if ($itemCount > 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         if ($vapaitapaikkoja < $parsedData['tickets']) {
-            echo json_encode(
-                array("message" => "Ei tarpeeksi vapaita paikkoja")
-            );
+            $message = "Ei tarpeeksi vapaita paikkoja";
+        } else {
+            $message = "Liput ostettu";
         }
+        echo json_encode(
+            array("message" => $message)
+        );
     }
 } else {
     http_response_code(404);
