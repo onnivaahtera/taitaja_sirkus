@@ -23,7 +23,7 @@ function Moblie() {
 
         <div
           id="nav"
-          className="h-0 w-full fixed z-10 left-0 top-0 overflow-x-auto duration-300 bg-overlay"
+          className="h-0 w-full fixed z-10 left-0 top-0 overflow-x-auto duration-300 bg-overlay bg-black bg-opacity-80"
         >
           <div className="relative text-2xl top-5 w-full text-center mt-8">
             <div className="p-2 hover:underline">
