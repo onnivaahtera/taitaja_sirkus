@@ -2,6 +2,7 @@
 
 class Database
 {
+    // database credentials
     private $host = 'localhost';
     private $database = 'sirkus';
     private $username = 'root';

@@ -27,6 +27,7 @@ if ($itemCount > 0) {
         );
         array_push($showArr["body"], $e);
     }
+    // sends message response to frontend
     echo json_encode($showArr);
 } else {
     http_response_code(404);
