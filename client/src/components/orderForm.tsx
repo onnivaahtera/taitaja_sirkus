@@ -3,10 +3,15 @@ import { FC, FormEvent, ChangeEvent, useState } from "react";
 import { useQuery } from "../pages/shows/[id]";
 
 const OrderForm: FC = () => {
-  const [order, setOrder] = useState({ email: "", phone: "", tickets: "" });
-  const [message, setMessage] = useState<any>();
-
   let query = useQuery();
+
+  const [order, setOrder] = useState({
+    email: "",
+    phone: "",
+    tickets: "",
+    id: query.get("id"),
+  });
+  const [message, setMessage] = useState<any>();
 
   // Send order to php endpoint
   const submitForm = (e: FormEvent<HTMLFormElement>) => {
@@ -19,11 +24,7 @@ const OrderForm: FC = () => {
       },
     });
   };
-  const getMessage = () => {
-    axios
-      .get(`http://localhost/sirkus/php/api/get.php/?id=${query.get("id")}`)
-      .then((response) => setMessage(response));
-  };
+
   // Sets order state from inputs
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const name = e.target.name;

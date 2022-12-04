@@ -8,15 +8,6 @@ class Shows
     // Table
     private $table = "esitys";
 
-    // Columns
-    public $esitysID;
-    public $theme;
-    public $area;
-    public $city;
-    public $date;
-    public $spots;
-    public $availableSpots;
-
     // db connection
     public function __construct($db)
     {
@@ -39,5 +30,16 @@ class Shows
         $stmt = $this->conn->prepare($sqlQuery);
         $stmt->execute();
         return $stmt;
+    }
+
+    // Update tickets 
+    public function updateShow($tickets)
+    {
+        $id = $_GET['id'];
+
+        $update = "UPDATE $this->table SET vapaitapaikkoja=$tickets WHERE esitysId=$id";
+        if ($this->conn->query($update) === true) {
+            echo "Updated succsessfully";
+        }
     }
 }
